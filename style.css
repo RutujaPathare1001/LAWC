@@ -462,6 +462,24 @@ ul {
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
+.person-card h4,
+.person-card p,
+.person-card .post-title,
+.person-card .education {
+  text-align: center;
+}
+
+.person-card .post-title {
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.person-card .education {
+  font-size: 0.9rem;
+  color: #666;
+}
+
 .person-card img {
   width: 110px;
   height: 110px;
