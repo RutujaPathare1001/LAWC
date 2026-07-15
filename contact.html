@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | lawc </title>
+<link rel="icon" type="image/jpeg" href="images/logo2.jpg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span>📞 8275319997/ 9890824350</span>
+        <span>✉️ 488womenslateambubai@gmail.com</span>
+      </div>
+      <div class="topbar-right">
+        <a href="#">Alumni</a>
+        <a href="#">Careers</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="images/logo2.jpg" alt="College Logo" class="logo">
+        <div class="brand-text">
+          <h1>Late Ambubai Women's College of Arts, Science and Commerce</h1>
+          <p>Affiliated to SNDT Women's University | NAAC Accredited</p>
+        </div>
+        <img src="images/logo1.jpg" alt="SNDT Women's University Logo" class="logo logo-university">
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <nav class="navbar" id="navbar">
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown">
+        <a href="about.html">About Us</a>
+        <ul class="dropdown">
+          <li><a href="about.html#vision">Vision &amp; Mission</a></li>
+          <li><a href="about.html#administration">Administration</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="academics.html">Academics</a>
+        <ul class="dropdown">
+          <li><a href="academics.html#arts">Arts</a></li>
+          <li><a href="academics.html#commerce">Commerce</a></li>
+          <li><a href="academics.html#science">Science</a></li>
+        </ul>
+      </li>
+      <li><a href="notice.html">Notice Board</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-banner">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Home / Contact Us</p>
+    </div>
+  </section>
+
+  <section class="container page-content contact-grid">
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <!-- REPLACE: your real address/phone/email -->
+      <p><strong>Address:</strong><br>Nillod Phata, Tal. Sillod, <br>Dist. Chhatrapati Sambhajinagar, Maharashtra, PIN Code, India</p>
+      <p><strong>Phone:</strong> 8275319997/ 9890824350</p>
+      <p><strong>Email:</strong> 488womenslateambubai@gmail.com</p>
+      <p><strong>Office Hours:</strong> Mon – Sat, 10:00 AM – 5:00 PM</p>
+    </div>
+
+    <div class="contact-form">
+      <h3>Send a Message</h3>
+      <!-- Note: this is a static front-end form only — it does not actually send
+           email yet. It just shows a confirmation message via script.js.
+           Wiring it to send real emails needs a small backend or a service
+           like Formspree/EmailJS later. -->
+      <form id="contactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="formStatus" class="form-status"></p>
+    </div>
+  </section>
+
+  <!-- REPLACE: paste your college's Google Maps embed code here -->
+  <section class="container page-content">
+    <h3>Find Us on the Map</h3>
+    <div class="map-embed">
+      <!--<iframe
+        src="https://www.google.com/maps?q=20.241421,75.6058085&z=17&hl=en"
+        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe> -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3743.4197097940523!2d75.60323357523536!3d20.241420981218084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDE0JzI5LjEiTiA3NcKwMzYnMjAuOSJF!5e0!3m2!1sen!2sin!4v1784104202455!5m2!1sen!2sin" 
+      width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" >
+    </iframe>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <h4>Late Ambubai Women's College of Arts, Science and Commerce/h4>
+        <p>Nillod Phata, Tal. Sillod, Dist. Chhatrapati Sambhajinagar</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#">Email</a>
+        <a href="#">Committees</a>
+        <a href="#">Women's Grievance Cell</a>
+        <a href="#">University Circular</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p>Phone: 8275319997/ 9890824350</p>
+        <p>Email: 488womenslateambubai@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Late Ambubai Women's College of Arts, Science and Commerce. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,637 @@
+/* ---------- Variables ---------- */
+:root {
+  --primary-color: #003366;
+  --secondary-color: #00509e;
+  --accent-color: #ffb400;
+  --text-dark: #222;
+  --text-light: #f5f5f5;
+  --bg-light: #f7f9fc;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ---------- Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-dark);
+  background: var(--bg-light);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ---------- Top bar ---------- */
+.topbar {
+  background: var(--primary-color);
+  color: var(--text-light);
+  font-size: 0.85rem;
+}
+
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 20px;
+}
+
+.topbar-left span {
+  margin-right: 20px;
+}
+
+.topbar-right a {
+  margin-left: 15px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.logo {
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.logo-university {
+  margin-left: auto;
+}
+
+.brand-text {
+  flex: 1;
+}
+
+.brand-text h1 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.brand-text p {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  background: var(--secondary-color);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list > li {
+  position: relative;
+}
+
+.nav-list > li > a {
+  display: block;
+  padding: 14px 20px;
+  color: #fff;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.nav-list > li > a:hover {
+  background: var(--primary-color);
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+.has-dropdown:hover .dropdown {
+  display: block;
+}
+
+.dropdown li a {
+  display: block;
+  padding: 10px 16px;
+  color: var(--text-dark);
+}
+
+.dropdown li a:hover {
+  background: var(--bg-light);
+}
+
+/* ---------- Slider ---------- */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background: #ccc;
+}
+
+.slides {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  padding: 10px 14px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.slider-btn.prev { left: 10px; }
+.slider-btn.next { right: 10px; }
+
+.slider-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 5;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.6);
+  cursor: pointer;
+}
+
+.dot.active {
+  background: var(--accent-color);
+}
+
+/* ---------- Highlights / cards ---------- */
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 40px auto;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-top: 4px solid var(--accent-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.92rem;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.read-more {
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+/* ---------- Notice board ---------- */
+.notice-section {
+  margin: 40px auto;
+}
+
+.notice-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 18px;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 8px;
+}
+
+.notice-list li {
+  display: flex;
+  gap: 15px;
+  padding: 10px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.notice-date {
+  min-width: 110px;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.notice-list a:hover {
+  color: var(--secondary-color);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--primary-color);
+  color: var(--text-light);
+  margin-top: 40px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 30px 20px;
+}
+
+.footer-col h4 {
+  margin-bottom: 12px;
+  color: var(--accent-color);
+}
+
+.footer-col a,
+.footer-col p {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: #dce4f0;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 14px;
+  font-size: 0.8rem;
+  background: #002347;
+}
+
+/* ---------- Inner page banner ---------- */
+.page-banner {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.page-banner h2 {
+  font-size: 1.8rem;
+}
+
+.page-banner p {
+  opacity: 0.85;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* ---------- Generic inner page content ---------- */
+.page-content {
+  margin: 35px auto;
+}
+
+.page-content h3 {
+  color: var(--primary-color);
+  margin-bottom: 14px;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 6px;
+}
+
+.pdf-download-link {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.pdf-download-link:hover,
+.pdf-note a:hover {
+  color: var(--accent-color);
+}
+
+.pdf-note {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.pdf-description {
+  margin: 10px 0 18px;
+  color: #555;
+}
+
+.motto-line {
+  text-align: center;
+}
+
+.motto-text {
+  display: inline-block;
+  color: #000;
+  font-weight: 700;
+}
+
+.vision-description {
+  text-align: justify;
+}
+
+.page-content h4 {
+  color: var(--secondary-color);
+  margin-bottom: 8px;
+}
+
+.page-content p {
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.bullet-list {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.bullet-list li {
+  list-style: disc;
+  margin-bottom: 6px;
+}
+
+.two-col-list {
+  columns: 2;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.col-box {
+  background: #fff;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* ---------- Info table ---------- */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.info-table th,
+.info-table td {
+  border: 1px solid #ddd;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.info-table th {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.info-table tr:nth-child(even) {
+  background: #f2f5fa;
+}
+
+/* ---------- Administration / people grid ---------- */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.person-card {
+  background: #fff;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.person-card img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  background: #ddd;
+}
+
+/* ---------- Notice items (full notice page) ---------- */
+.notice-item {
+  background: #fff;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+  border-left: 4px solid var(--accent-color);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.notice-item .notice-date {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* ---------- Gallery grid ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.gallery-item {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  background: #ddd;
+}
+
+.gallery-item p {
+  padding: 10px 12px;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* ---------- Contact page ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.contact-info p {
+  margin-bottom: 14px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-form label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.contact-form button {
+  background: var(--secondary-color);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact-form button:hover {
+  background: var(--primary-color);
+}
+
+.form-status {
+  font-size: 0.9rem;
+  color: green;
+}
+
+.map-embed iframe {
+  display: block;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    display: none;
+  }
+
+  .navbar.open .nav-list {
+    display: flex;
+  }
+
+  .has-dropdown:hover .dropdown {
+    position: static;
+    display: none;
+    box-shadow: none;
+  }
+
+  .has-dropdown.open .dropdown {
+    display: block;
+  }
+
+  .highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar-inner {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .two-col,
+  .people-grid,
+  .gallery-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .two-col-list {
+    columns: 1;
+  }
+
+  .header-inner {
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    height: 50px;
+    width: 50px;
+  }
+
+  .brand-text h1 {
+    font-size: 1.1rem;
+  }
+
+  .brand-text p {
+    font-size: 0.75rem;
+  }
+}

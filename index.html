@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>lawc | Home</title>
+<link rel="icon" type="image/jpeg" href="images/logo2.jpg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top contact bar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span>📞 8275319997</span>
+        <span>✉️ 488womenslateambubai@gmail.com</span>
+      </div>
+      <div class="topbar-right">
+        <a href="#">Alumni</a>
+        <a href="#">Careers</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header with logo and college name -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="images/logo2.jpg" alt="College Logo" class="logo">
+        <div class="brand-text">
+          <h1>Late Ambubai Women's College of Arts, Science and Commerce</h1>
+          <p>Affiliated to SNDT Women's University | NAAC Accredited</p>
+        </div>
+        <img src="images/logo1.jpg" alt="SNDT Women's University Logo" class="logo logo-university">
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown">
+        <a href="about.html">About Us</a>
+        <ul class="dropdown">
+          <li><a href="about.html#vision">Vision &amp; Mission</a></li>
+          <li><a href="about.html#administration">Administration</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="academics.html">Academics</a>
+        <ul class="dropdown">
+          <li><a href="academics.html#arts">Arts</a></li>
+          <li><a href="academics.html#commerce">Commerce</a></li>
+          <li><a href="academics.html#science">Science</a></li>
+        </ul>
+      </li>
+      <li><a href="notice.html">Notice Board</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero image slider -->
+  <section class="slider" id="slider">
+    <div class="slides">
+      <div class="slide active" style="background-image:url('images/slide1.jpg')"></div>
+      <div class="slide" style="background-image:url('images/slide2.jpg')"></div>
+      <div class="slide" style="background-image:url('images/slide3.jpg')"></div>
+    </div>
+    <button class="slider-btn prev" id="prevBtn">&#10094;</button>
+    <button class="slider-btn next" id="nextBtn">&#10095;</button>
+    <div class="slider-dots" id="sliderDots"></div>
+  </section>
+
+  <!-- Faculty highlight cards -->
+  <section class="container highlights">
+    <div class="card">
+      <h3>Arts</h3>
+      <p>The Faculty of Arts offers programs in language, culture, communication, and history with a student-centered approach to teaching.</p>
+      <a href="academics.html#arts" class="read-more">Read More →</a>
+    </div>
+    <div class="card">
+      <h3>Commerce</h3>
+      <p>The Department of Commerce builds strong foundations in accounting, business studies, and economics for future professionals.</p>
+      <a href="academics.html#commerce" class="read-more">Read More →</a>
+    </div>
+    <div class="card">
+      <h3>Science</h3>
+      <p>The Faculty of Science engages students in research and experimentation to understand the principles of the natural world.</p>
+      <a href="academics.html#science" class="read-more">Read More →</a>
+    </div>
+  </section>
+
+  <!-- Notice board -->
+  <section class="container notice-section">
+    <h2>Notice Board, News &amp; Events</h2>
+    <ul class="notice-list">
+      <li>
+        <span class="notice-date">15 July 2026</span>
+        <a href="#">Admission Process Started for Academic Year 2026-27</a>
+      </li>
+      <li>
+        <span class="notice-date">10 July 2026</span>
+        <a href="#">Walk-in Interview for Guest Faculty Positions</a>
+      </li>
+      <li>
+        <span class="notice-date">01 July 2026</span>
+        <a href="#">Time Table for First Year Released</a>
+      </li>
+      <li>
+        <span class="notice-date">20 June 2026</span>
+        <a href="#">Scholarship Application Deadline Extended</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <h4>Late Ambubai Women's College of Arts, Science and Commerce</h4>
+        <p>Nillod Phata, Tal. Sillod, Dist. Chhatrapati Sambhajinagar</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#">Email</a>
+        <a href="#">Committees</a>
+        <a href="#">Women's Grievance Cell</a>
+        <a href="#">University Circular</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p>Phone: 8275319997</p>
+        <p>Email: 488womenslateambubai@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Late Ambubai Women's College of Arts, Science and Commerce. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
